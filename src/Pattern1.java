@@ -6,11 +6,11 @@ public class Pattern1 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter Phone number");
-		String pnum = scan.nextLine();
-		String regex = "^[+][9][1][ ][0-9]{10}$";
+		System.out.println("Enter password should be eight character");
+		String password = scan.nextLine();
+		String regex = "^[a-zA-Z0-9]{8,}$";
 		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(pnum);
+		Matcher matcher = pattern.matcher(password);
 		System.out.println(matcher.matches());
 	}
 
